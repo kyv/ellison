@@ -6,8 +6,6 @@ const formatResponse = require('./lib/util').formatResponse;
 const port = process.env.PORT || 9000;
 const router = express.Router();
 
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
-
 router.get('/:fileUrl*', (req, res) => {
   const path = req.params[0];
   const proto = req.params.fileUrl;
